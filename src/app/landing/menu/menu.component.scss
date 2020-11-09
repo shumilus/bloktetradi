@@ -1,0 +1,27 @@
+:host {
+  height: inherit;
+}
+
+menu {
+  display: flex;
+  height: inherit;
+
+  li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px 15px;
+    letter-spacing: .1em;
+    transition: text-shadow .3s;
+    cursor: pointer;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+      text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+      background: rgba(255, 255, 255, 0.2);
+      border-bottom: 3px solid black;
+      transition: 1s;
+    }
+  }
+}

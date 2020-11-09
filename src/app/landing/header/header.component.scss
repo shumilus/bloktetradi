@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0 100px;
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      width: 80px;
+      //height: 44px;
+    }
+
+    .logo-name {
+      width: 176px;
+      padding-top: 5px;
+    }
+  }
+
+  .menu-wrap{
+    display: flex;
+    align-items: center;
+    height: inherit;
+  }
+
+  button {
+    margin-left: 20px;
+  }
+}
