@@ -8,7 +8,7 @@
     <div class="content">
 
       <div class="features">
-        <div class="block-header justify-between">
+        <div class="block-header d-flex justify-between">
           <div class="line"></div>
           <p class="tab-name p-l-20 with-50">Технические характеристики</p>
 
@@ -18,7 +18,7 @@
           </div>
         </div>
 
-        <div class="block-content">
+        <div class="block-content d-flex align-center">
           <div class="with-70 p-r-20">
             <p class="text">— твердый как у книги переплёт защищает бумагу и ваши записи</p>
             <p class="text">— стильное дизайнерское оформление обложки</p>
@@ -30,7 +30,7 @@
           </div>
         </div>
 
-        <div class="block-content">
+        <div class="block-content d-flex align-center">
           <div class="with-30">
             <img src="../../assets/features/feature-2.png" alt="feature-2">
           </div>
@@ -44,14 +44,14 @@
       </div>
 
       <div class="video-block">
-        <div class="block-header justify-center">
+        <div class="block-header d-flex justify-center">
           <div class="block-header-title">
             <h2 class="title text-center">Тетради на кольцах</h2>
             <p class="title subtitle text-center">в деталях показываем на видео</p>
           </div>
         </div>
 
-        <div class="block-content">
+        <div class="block-content d-flex align-center">
           <div class="video" (click)="isShowVideo = true" [ngClass]="{'show': isShowVideo}">
             <iframe allowfullscreen="allowfullscreen"
                     src="//www.youtube.com/embed/d9l3H0YsSzo?autoplay=1&amp;autohide=1&amp;controls=1&amp;showinfo=0&amp;rel=0">
@@ -61,7 +61,7 @@
       </div>
 
       <div class="advantages">
-        <div class="block-header justify-between">
+        <div class="block-header d-flex justify-between">
           <div class="line"></div>
           <p class="tab-name p-l-20 with-50">Преимущества</p>
 
@@ -72,15 +72,43 @@
         </div>
 
         <div class="block-content">
-          <div class="with-70 p-r-20">
-            <p class="text">— твердый как у книги переплёт защищает бумагу и ваши записи</p>
-            <p class="text">— стильное дизайнерское оформление обложки</p>
-            <p class="text">— содержимое тетради состоит из сменных блоков по 120 листов,
-              которые крепятся на металлических кольцах</p>
+          <div class="d-flex">
+            <img class="number" src="assets/advantages/1.svg" alt="1">
+            <p>В любой момент с легкостью можете поменять местами, заменить, убрать или добавить
+              листы, чего не сделаешь с обычной тетрадью. Это делает тетрадь практически бесконечной!</p>
           </div>
-          <div class="with-30">
-            <img src="../../assets/features/feature-1.png" alt="feature-1">
+          <div class="d-flex">
+            <img class="number" src="assets/advantages/2.svg" alt="2">
+            <p>В одной тетради можно совместить множество предметов, она же будет и черновиком, который всегда
+              под рукой, и записной книжкой. Тетрадь на все случаи жизни!</p>
           </div>
+          <div class="d-flex">
+            <img class="number" src="assets/advantages/3.svg" alt="3">
+            <p>Одна тетрадь на кольцах со сменными блоками заменит десяток обычных тетрадей. Не нужно переживать,
+              взял ли нужный конспект: взял тетрадь - значит все с собой</p>
+          </div>
+          <div class="d-flex">
+            <img class="number" src="assets/advantages/4.svg" alt="4">
+            <p>Сбережете природу и деньги, поскольку вам больше не придется выкидывать тетради с остатками чистых
+              листов. Достаточно будет убрать исписанные листы, добавить чистые и тетрадь как новенькая!</p>
+          </div>
+          <div class="d-flex">
+            <img class="number" src="assets/advantages/5.svg" alt="2">
+            <p>Сэкономите место как в сумке, так и на книжных полках!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="goods">
+        <div class="block-header">
+          <div>
+            <p class="goods-title">тетради на кольцах</p>
+            <p class="goods-title goods-subtitle">со сменными блоками</p>
+          </div>
+          <p class="goods-slogan">упорядочат творческий, учебный и рабочий беспорядок с ярким настроением</p>
+        </div>
+        <div class="block-content d-flex">
+          <div class="good" *ngFor="let good of goods"></div>
         </div>
       </div>
 
