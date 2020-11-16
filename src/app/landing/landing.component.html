@@ -108,7 +108,56 @@
           <p class="goods-slogan">упорядочат творческий, учебный и рабочий беспорядок с ярким настроением</p>
         </div>
         <div class="block-content d-flex">
-          <div class="good" *ngFor="let good of goods"></div>
+          <div class="good-wrap" *ngFor="let good of goods">
+            <div class="good">
+              <img src="./assets/goods/good-{{good.img}}.jpg" alt="good-{{good.img}}">
+              <div>
+                <p class="good-title">{{good.name}}</p>
+                <div class="d-flex align-center justify-center wrap">
+                  <p class="price">{{good.price}}</p>
+                  <div class="button-wrap">
+                    <button class="button">Купить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="more-goods">ЕЩЕ БОЛЬШЕ ТЕТРАДЕЙ НА САЙТЕ!</div>
+      </div>
+
+      <div class="delivery">
+        <div class="block-header d-flex justify-between">
+          <div class="line"></div>
+          <p class="tab-name p-l-20 with-50">Доставка и оплата</p>
+
+          <div class="with-50">
+            <h2 class="title">как сделать заказ ?</h2>
+          </div>
+        </div>
+
+        <div class="block-content">
+          <div class="delivery-block">
+            <p class="delivery-title">ОФОРМИТЕ ЗАКАЗ</p>
+            <img class="order-icon" src="./assets/delivery/market.svg" alt="order">
+            <div class="d-flex align-center justify-center">
+              <p class="delivery-text">Сделайте заказ на сайте или по телефону</p>
+              <img class="phone-icon" src="./assets/delivery/phone-call.svg" alt="phone">
+            </div>
+          </div>
+
+          <div class="delivery-block">
+            <p class="delivery-title">МЫ ОТВЕТИМ</p>
+            <img class="order-icon" src="./assets/delivery/answering-call.svg" alt="answering">
+            <p class="delivery-text">Мы перезвоним или пришлем сообщение с деталями заказа</p>
+          </div>
+
+          <div class="delivery-block">
+            <p class="delivery-title">ДОСТАВИМ</p>
+            <img class="order-icon" src="./assets/delivery/free-delivery.svg" alt="free-delivery">
+            <p class="delivery-text">Вы получите заказ в нашем пункте выдачи в
+              г. Харьков или мы доставим заказ ТК «Новая почта» в любой город</p>
+          </div>
         </div>
       </div>
 

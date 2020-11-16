@@ -67,9 +67,11 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  transition: .5s;
 
   &:hover {
     background: #d94c1b;
+    transition: .5s;
   }
 
   &:active {
@@ -92,6 +94,10 @@ button {
 
 .align-center {
   align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 //.flex-1 {

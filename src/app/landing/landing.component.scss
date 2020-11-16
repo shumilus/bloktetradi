@@ -182,27 +182,134 @@
       }
 
       .block-content {
-        justify-content: center;
+        //justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .good-wrap {
+        padding: 20px;
+        //min-width: 200px;
+        //max-width: 270px;
+        //width: 100%;
+        width: 25%;
+        //flex: 4;
+        box-sizing: border-box;
+        transition: .5s;
+        transform: scale(1);
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       .good {
-        width: 214px;
-        height: 400px;
         border-style: solid;
         border-width: 1px;
         border-color: #C7C7C7;
         background-color: transparent;
         border-radius: 2px;
-        padding-bottom: 1px;
-        margin: 30px;
         cursor: pointer;
+        padding: 15px;
 
         &:hover {
           box-shadow: 0 0 20px rgba(0,0,0,0.3);
           border-color: #E5E5E5;
         }
+
+        img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+        }
+
+        .good-title {
+          padding: 15px 0;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          height: 36px;
+        }
+
+        .price {
+          flex: 1;
+          font-size: 1.5rem;
+          font-weight: 600;
+          text-align: center;
+          padding: 8px;
+
+          &:after {
+            content: ' ₴';
+            font-size: 14px;
+          }
+        }
+
+        .button-wrap {
+          flex: 1;
+          text-align: center;
+          padding: 0 8px;
+        }
+
+        .button {
+          transition: 0.5s;
+
+          &:hover {
+            transition: 0.5s;
+            transform: scale(1.1);
+          }
+        }
+      }
+      .more-goods {
+        padding: 25px;
+        font-size: 2.5rem;
+        color: #F15A25;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+          color: #ec981b;
+        }
+      }
+    }
+
+    .delivery {
+      background: $lightBackgroundColor;
+      padding: 20px 0;
+
+      &-block {
+        text-align: center;
+        padding: 25px 0 20px 0;
+        border-bottom: 2px solid black;
+
+        .delivery-title {
+          font-size: 1.5rem;
+          font-family: $textFont;
+          padding: 15px;
+          font-weight: 600;
+        }
       }
 
+      &-text {
+        font-size: 1.5rem;
+      }
+
+      .order-icon {
+        width: 150px;
+        height: auto;
+        padding: 15px;
+      }
+
+      .phone-icon {
+        cursor: pointer;
+        width: 30px;
+        height: auto;
+        margin-left: 15px;
+        transition: 0.5s;
+
+        &:hover {
+          transition: 0.5s;
+          transform: scale(1.1);
+        }
+      }
     }
   }
 }
