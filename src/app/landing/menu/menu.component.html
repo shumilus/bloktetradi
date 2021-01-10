@@ -1,3 +1,3 @@
 <menu>
-  <li *ngFor="let tab of tabs">{{tab}}</li>
+  <li *ngFor="let tab of tabs" (click)="scrollTo(tab.link)">{{tab.name}}</li>
 </menu>

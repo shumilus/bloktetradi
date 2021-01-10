@@ -1,10 +1,19 @@
 // fonts
-$textFont: 'Noto Sans', sans-serif;
-$titleFont: 'Russo One', sans-serif;
-$testHand: 'Patrick Hand', cursive;
-$testHandSC: 'Patrick Hand SC', cursive;
+
+$flowers: 'Indie Flower', cursive;
+$caveat: 'Caveat', cursive;
 
 // colors
 $mainLightColor: #fff;
-$main-dark-color: #1F001F;
-$lightBackgroundColor: #F3F7FE
+$mainDarkColor: #1F001F;
+
+$brandPrimaryColor: #890089;
+$brandSecondaryColor: #ffb801;
+$lightBackgroundColor: #F3F7FE;
+
+$buttonColor: $brandSecondaryColor;
+$buttonHoverColor: #f15a24;
+
+$goodsBorderColor: #C7C7C7;
+
+

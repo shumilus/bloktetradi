@@ -1,27 +1,44 @@
+@import '../../../styles/variables.scss';
+
 header {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.2);
+  height: 70px;
+  //background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   padding: 0 100px;
 
-  .logo-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: linear-gradient(rgba(25,27,32,.1),rgba(25,27,32,0));
+  //box-shadow: 0 10px 10px rgba(0,0,0,.25);
 
-    .logo {
+  .logo {
+    cursor: pointer;
+
+    &-icon {
       width: 80px;
-      //height: 44px;
     }
 
-    .logo-name {
-      width: 176px;
-      padding-top: 5px;
+    &-name {
+      font-size: 40px;
+      font-family: $caveat;
+      text-transform: capitalize;
+      font-weight: 600;
+      color: $brandSecondaryColor;
+      transition: .5s;
+    }
+
+    &:hover {
+      .logo-name {
+        color: $buttonHoverColor;
+        transition: .5s;
+      }
     }
   }
+
+
 
   .menu-wrap{
     display: flex;
@@ -29,7 +46,19 @@ header {
     height: inherit;
   }
 
-  button {
+  .phone-icon {
+    cursor: pointer;
+    width: 35px;
+    height: auto;
+    transition: 0.5s;
+    will-change: transform;
     margin-left: 20px;
+
+    &:hover {
+      will-change: transform;
+      transition: transform .5s;
+      transform: scale(1.2);
+    }
   }
+
 }

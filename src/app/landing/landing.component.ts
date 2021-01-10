@@ -1,25 +1,23 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
-    selector: 'app-landing',
-    templateUrl: './landing.component.html',
-    styleUrls: ['./landing.component.scss']
+  selector: 'app-landing',
+  templateUrl: './landing.component.html',
+  styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-    isShowVideo: boolean;
+  @ViewChild('payment') payment: ElementRef;
 
-    public goods = [
-        {name: 'Фрукты', img: 1, price: 150},
-        {name: 'Пейзаж', img: 2, price: 150},
-        {name: 'Моноколор Blue', img: 3, price: 175},
-        {name: 'Dogs', img: 4, price: 205},
-        {name: 'Joy', img: 5, price: 395},
-    ];
+  constructor() {
+  }
 
-    constructor() {
-    }
+  ngOnInit(): void {
+  }
 
-    ngOnInit(): void {
-    }
+  public onScrollTo(elem: any): void {
+    const test = document.getElementById(elem);
+    console.log(test);
+    test.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
 }

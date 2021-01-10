@@ -1,138 +1,31 @@
+
 <div class="lending">
-  <div class="header-wrap">
-    <app-header></app-header>
+  <div>
+<!--    <div class="header-background"></div>-->
+    <div class="header-wrap">
+      <app-header (onScrollTo)="onScrollTo($event)"></app-header>
+    </div>
   </div>
+
   <div class="wrap">
     <app-carousel></app-carousel>
 
     <div class="content">
+      <app-features id="features"></app-features>
 
-      <div class="features">
+      <app-video-block></app-video-block>
+
+      <app-advantages></app-advantages>
+
+      <app-goods id="goods"></app-goods>
+
+      <div class="delivery" id="delivery">
         <div class="block-header d-flex justify-between">
           <div class="line"></div>
-          <p class="tab-name p-l-20 with-50">Технические характеристики</p>
+          <p class="tab-name p-l-20 with-50">Доставка</p>
 
           <div class="with-50">
-            <h2 class="title">Для ценителей</h2>
-            <p class="title subtitle">практичных и стильных вещей</p>
-          </div>
-        </div>
-
-        <div class="block-content d-flex align-center">
-          <div class="with-70 p-r-20">
-            <p class="text">— твердый как у книги переплёт защищает бумагу и ваши записи</p>
-            <p class="text">— стильное дизайнерское оформление обложки</p>
-            <p class="text">— содержимое тетради состоит из сменных блоков по 120 листов,
-              которые крепятся на металлических кольцах</p>
-          </div>
-          <div class="with-30">
-            <img src="../../assets/features/feature-1.png" alt="feature-1">
-          </div>
-        </div>
-
-        <div class="block-content d-flex align-center">
-          <div class="with-30">
-            <img src="../../assets/features/feature-2.png" alt="feature-2">
-          </div>
-          <div class="with-70 p-l-20">
-            <p class="text">— кольцевой механизм разжимается, и листы можно легко
-              доставать, перекладывать, добавлять или убирать</p>
-            <p class="text">— дополнительные сменные блоки всегда в продаже</p>
-            <p class="text">— удобный формат тетради А5</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-block">
-        <div class="block-header d-flex justify-center">
-          <div class="block-header-title">
-            <h2 class="title text-center">Тетради на кольцах</h2>
-            <p class="title subtitle text-center">в деталях показываем на видео</p>
-          </div>
-        </div>
-
-        <div class="block-content d-flex align-center">
-          <div class="video" (click)="isShowVideo = true" [ngClass]="{'show': isShowVideo}">
-            <iframe allowfullscreen="allowfullscreen"
-                    src="//www.youtube.com/embed/d9l3H0YsSzo?autoplay=1&amp;autohide=1&amp;controls=1&amp;showinfo=0&amp;rel=0">
-            </iframe>
-          </div>
-        </div>
-      </div>
-
-      <div class="advantages">
-        <div class="block-header d-flex justify-between">
-          <div class="line"></div>
-          <p class="tab-name p-l-20 with-50">Преимущества</p>
-
-          <div class="with-50">
-            <h2 class="title">5 причин</h2>
-            <p class="title subtitle">заменить обычную тетрадь на тетрадь со сменными блоками</p>
-          </div>
-        </div>
-
-        <div class="block-content">
-          <div class="d-flex">
-            <img class="number" src="assets/advantages/1.svg" alt="1">
-            <p>В любой момент с легкостью можете поменять местами, заменить, убрать или добавить
-              листы, чего не сделаешь с обычной тетрадью. Это делает тетрадь практически бесконечной!</p>
-          </div>
-          <div class="d-flex">
-            <img class="number" src="assets/advantages/2.svg" alt="2">
-            <p>В одной тетради можно совместить множество предметов, она же будет и черновиком, который всегда
-              под рукой, и записной книжкой. Тетрадь на все случаи жизни!</p>
-          </div>
-          <div class="d-flex">
-            <img class="number" src="assets/advantages/3.svg" alt="3">
-            <p>Одна тетрадь на кольцах со сменными блоками заменит десяток обычных тетрадей. Не нужно переживать,
-              взял ли нужный конспект: взял тетрадь - значит все с собой</p>
-          </div>
-          <div class="d-flex">
-            <img class="number" src="assets/advantages/4.svg" alt="4">
-            <p>Сбережете природу и деньги, поскольку вам больше не придется выкидывать тетради с остатками чистых
-              листов. Достаточно будет убрать исписанные листы, добавить чистые и тетрадь как новенькая!</p>
-          </div>
-          <div class="d-flex">
-            <img class="number" src="assets/advantages/5.svg" alt="2">
-            <p>Сэкономите место как в сумке, так и на книжных полках!</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="goods">
-        <div class="block-header">
-          <div>
-            <p class="goods-title">тетради на кольцах</p>
-            <p class="goods-title goods-subtitle">со сменными блоками</p>
-          </div>
-          <p class="goods-slogan">упорядочат творческий, учебный и рабочий беспорядок с ярким настроением</p>
-        </div>
-        <div class="block-content d-flex">
-          <div class="good-wrap" *ngFor="let good of goods">
-            <div class="good">
-              <img src="./assets/goods/good-{{good.img}}.jpg" alt="good-{{good.img}}">
-              <div>
-                <p class="good-title">{{good.name}}</p>
-                <div class="d-flex align-center justify-center wrap">
-                  <p class="price">{{good.price}}</p>
-                  <div class="button-wrap">
-                    <button class="button">Купить</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="more-goods">ЕЩЕ БОЛЬШЕ ТЕТРАДЕЙ НА САЙТЕ!</div>
-      </div>
-
-      <div class="delivery">
-        <div class="block-header d-flex justify-between">
-          <div class="line"></div>
-          <p class="tab-name p-l-20 with-50">Доставка и оплата</p>
-
-          <div class="with-50">
-            <h2 class="title">как сделать заказ ?</h2>
+            <h2 class="title">Как сделать заказ ?</h2>
           </div>
         </div>
 
@@ -142,7 +35,10 @@
             <img class="order-icon" src="./assets/delivery/market.svg" alt="order">
             <div class="d-flex align-center justify-center">
               <p class="delivery-text">Сделайте заказ на сайте или по телефону</p>
-              <img class="phone-icon" src="./assets/delivery/phone-call.svg" alt="phone">
+              <!--              <img class="phone-icon" src="./assets/delivery/phone-call.svg" alt="phone">-->
+              <div class="phone-container">
+                <i class="Phone is-animating"></i>
+              </div>
             </div>
           </div>
 
@@ -160,6 +56,44 @@
           </div>
         </div>
       </div>
+
+      <div class="payment" id="payment">
+        <div class="block-header d-flex justify-between">
+          <div class="line"></div>
+          <p class="tab-name p-l-20 with-50">Оплата</p>
+
+          <div class="with-50">
+            <h2 class="title">Можно оплатить:</h2>
+          </div>
+        </div>
+
+        <div class="block-content">
+          <div>
+            <p class="payment-text">1. Наличными при получении на складе</p>
+          </div>
+          <div>
+            <p class="payment-text">2. Банковской картой</p>
+          </div>
+          <div>
+            <p class="payment-text">3. Наложенным платежом при получении в отделении ТК "Новая почта"</p>
+          </div>
+          <div>
+            <p class="payment-text">4. Гарантированным платежом через систему ТК "Новая почта"</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback">
+        <div class="block-header">
+          <h2 class="title">Остались вопросы ?</h2>
+          <p class="subtitle">Задайте их нам!</p>
+        </div>
+        <button class="feedback-button">Получить консултацию</button>
+      </div>
+
+      <footer>
+       <app-footer></app-footer>
+      </footer>
 
     </div>
 

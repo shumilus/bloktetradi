@@ -1,3 +1,22 @@
 <div class="carousel">
-  <div class="poster"></div>
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide [dotContent]="'sd'">
+      <div class="poster" style="background-image: url('../../../assets/carousel/banner-1.jpg')"></div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="poster" style="background-image: url('../../../assets/carousel/banner-2.jpg')"></div>
+    </ng-template>npm
+    <ng-template carouselSlide>
+      <div class="poster" style="background-image: url('../../../assets/carousel/banner-3.jpg')"></div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="poster" style="background-image: url('../../../assets/carousel/banner-4.jpg')"></div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="poster" style="background-image: url('../../../assets/carousel/banner-5.jpg')"></div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="poster" style="background-image: url('../../../assets/carousel/banner-6.jpg')"></div>
+    </ng-template>
+  </owl-carousel-o>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, HostListener, OnInit, Output, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor() { }
+  @Output() onScrollTo = new EventEmitter<string>();
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  public scrollTo(link: string): void {
+    this.onScrollTo.emit(link);
   }
 
 }

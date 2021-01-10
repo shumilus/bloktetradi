@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,12 +6,32 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  public tabs = ['Особенности', 'Преимущества', 'Доставка', 'Оплата'];
+  @Output() onScrollTo = new EventEmitter<string>();
+  public tabs = [{
+    name: 'Тетради',
+    link: 'goods',
+  }, {
+    name: 'Особенности',
+    link: 'features',
+  }, {
+    name: 'Преимущества',
+    link: 'advantages',
+  }, {
+    name: 'Доставка',
+    link: 'delivery',
+  }, {
+    name: 'Оплата',
+    link: 'payment',
+  }];
 
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  public scrollTo(link: string): void {
+    this.onScrollTo.emit(link);
   }
 
 }

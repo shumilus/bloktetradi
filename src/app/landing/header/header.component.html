@@ -1,12 +1,16 @@
 <header>
-  <div class="logo-wrap">
-    <img class="logo" src="../../assets/icons/logo.svg" alt="logo">
-    <img class="logo-name" src="../../assets/icons/logo-name.svg" alt="logo">
+  <div class="logo d-flex justify-center align-center">
+    <img class="logo-icon" src="./assets/icons/logo.svg" alt="logo">
+    <p class="logo-name">bloktetradi</p>
+<!--    <img class="logo-name" src="./assets/icons/logo-name.svg" alt="logo">-->
   </div>
 
   <div class="menu-wrap">
-    <app-menu></app-menu>
-    <button>Обратный звонок</button>
+    <app-menu (onScrollTo)="scrollTo($event)"></app-menu>
+    <img class="phone-icon" src="./assets/icons/phone-call.svg" alt="phone">
   </div>
 
+  <div>
+    <app-hamburger-button></app-hamburger-button>
+  </div>
 </header>

@@ -1,0 +1,52 @@
+<div class="features">
+  <div class="block-header features-header">
+    <h2 class="title">Для ценителей</h2>
+    <p class="title subtitle">практичных и стильных вещей !</p>
+  </div>
+
+  <div class="block-content d-flex align-center">
+    <!--      <p class="text">— стильное дизайнерское оформление обложки</p>-->
+    <p class="with-50 p-r-100 text">Сменные блоки крепятся на кольцевой механизм</p>
+    <div class="with-50 d-flex justify-between">
+      <img class="with-30" src="../../../assets/features/feature-1.png" alt="feature-1">
+      <img class="with-30" src="../../../assets/features/feature-2.png" alt="feature-2">
+      <img class="with-30" src="../../../assets/features/feature-3.png" alt="feature-3">
+    </div>
+  </div>
+
+  <div class="block-content d-flex align-center">
+    <div class="with-50 d-flex align-center justify-center feature-wrap">
+      <img [ngClass]="{'feature': !featureToggle}" class="with-50" src="../../../assets/features/feature-4.png" alt="feature-4">
+      <img [ngClass]="{'feature': featureToggle}" class="with-50" src="../../../assets/features/feature-5.png" alt="feature-5">
+    </div>
+    <p class="with-50 p-l-100 text">Можно добавлять, убирать или перекладывать листы</p>
+  </div>
+
+  <div class="block-content d-flex justify-between align-center">
+    <p class="with-50 text">Надежный переплёт защищает бумагу и ваши записи</p>
+    <div class="with-50 p-l-100 d-flex justify-center justify-between">
+      <img class="with-45" src="../../../assets/features/feature-6.png" alt="feature-6">
+      <img class="with-45" src="../../../assets/features/feature-7.png" alt="feature-7">
+    </div>
+  </div>
+
+  <div class="block-content d-flex align-center">
+    <div class="carousel with-50">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide [dotContent]="'sd'">
+          <div class="poster" style="background-image: url('../../../assets/features/feature-8.png')"></div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="poster" style="background-image: url('../../../assets/features/feature-1.png')"></div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+<!--    <img class="with-50" src="../../../assets/features/feature-8.png" alt="feature-8">-->
+    <p class="with-50 p-l-100 text">Различные материалы обложек</p>
+  </div>
+
+  <div class="block-content">
+    <p class="text format-feature-text decoration">Удобный формат тетради А5</p>
+    <div class="feature-bg w"></div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+@import './variables.scss';
+
+.socialIcons {
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+.socialIcons li {
+  display: inline-block;
+  margin: auto 10px;
+}
+.socialIcons li a {
+  text-align: center;
+  display: inline-block;
+  font-size: 4rem;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  color: $brandSecondaryColor;
+  transition: all .5s ease;
+  transform-origin: left;
+  transform: rotateY(-30deg);
+  text-shadow: 10px 0 1px #131313, 10px 0 1px #070707, 10px 0 1px black, 10px 0 1px #000000;
+}
+.socialIcons li a:hover {
+  color: #202020;
+  transform: rotate(0deg);
+  text-shadow: 0 0 1px #131313, 0 0 1px #070707, 0 0 1px black, 0 0 1px black;
+}

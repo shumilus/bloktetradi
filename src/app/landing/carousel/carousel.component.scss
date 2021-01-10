@@ -1,11 +1,14 @@
+@import '../../../styles/variables.scss';
+
 .carousel {
   .poster {
+    padding-top: 80px;
     height: 100vh;
     width: 100%;
-    background-image: url('../../../assets/carousel/icecream.jpg');
-    background-color: #fff;
+    background-color: $mainLightColor;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    box-sizing: border-box;
   }
 }

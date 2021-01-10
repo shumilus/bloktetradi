@@ -1,0 +1,172 @@
+@import '../../../styles/variables.scss';
+
+.goods {
+  padding: 80px 0 20px 0;
+
+  .goods-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $brandPrimaryColor;
+  }
+
+  .goods-subtitle {
+    color: $mainDarkColor;
+  }
+
+  .goods-slogan {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 5px;
+    padding: 15px 10px 0 10px;
+    border-top: 2px solid $brandSecondaryColor;
+    color: $brandSecondaryColor;
+  }
+
+  .more-goods {
+    padding: 25px;
+    font-size: 3rem;
+    color: $brandSecondaryColor;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .5s;
+
+    &:hover {
+      color: #ec981b;
+      transform: scale(1.1);
+      transition: .5s;
+    }
+  }
+
+  .animated-button1 {
+    padding: 20px;
+    margin: 12px;
+    display: inline-block;
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+    overflow: hidden;
+    color: $brandSecondaryColor;
+    font-size: 3rem;
+    letter-spacing: 2.5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .5s;
+
+    &:hover {
+      color: #ec981b;
+      transform: scale(1.1);
+      transition: .5s;
+    }
+  }
+
+  .animated-button1::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #ad8585;
+    opacity: 0;
+    -webkit-transition: .2s opacity ease-in-out;
+    transition: .2s opacity ease-in-out;
+  }
+
+  .animated-button1:hover::before {
+    //opacity: 0.2;
+  }
+
+  .animated-button1 span {
+    position: absolute;
+  }
+
+  .animated-button1 span:nth-child(1) {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to($brandSecondaryColor));
+    background: linear-gradient(to left, rgba(43, 8, 8, 0), $brandSecondaryColor);
+    -webkit-animation: 2s animateTop linear infinite;
+    animation: 2s animateTop linear infinite;
+  }
+
+  @keyframes animateTop {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    100% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+
+  .animated-button1 span:nth-child(2) {
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 2px;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to($brandSecondaryColor));
+    background: linear-gradient(to top, rgba(43, 8, 8, 0), $brandSecondaryColor);
+    -webkit-animation: 2s animateRight linear -1s infinite;
+    animation: 2s animateRight linear -1s infinite;
+  }
+
+  @keyframes animateRight {
+    0% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+
+  .animated-button1 span:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to($brandSecondaryColor));
+    background: linear-gradient(to right, rgba(43, 8, 8, 0), $brandSecondaryColor);
+    -webkit-animation: 2s animateBottom linear infinite;
+    animation: 2s animateBottom linear infinite;
+  }
+
+  @keyframes animateBottom {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+  }
+
+  .animated-button1 span:nth-child(4) {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 2px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to($brandSecondaryColor));
+    background: linear-gradient(to bottom, rgba(43, 8, 8, 0), $brandSecondaryColor);
+    -webkit-animation: 2s animateLeft linear -1s infinite;
+    animation: 2s animateLeft linear -1s infinite;
+  }
+
+  @keyframes animateLeft {
+    0% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+    100% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+  }
+}
