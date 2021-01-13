@@ -1,5 +1,6 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {IGood} from '../goods.component';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-good',
@@ -10,10 +11,16 @@ import {IGood} from '../goods.component';
 export class GoodComponent implements OnInit {
   @Input() good: IGood;
 
+  linkToBonusPaymentMethodsHelp$: Observable<any>;
+
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  public onBuyClick() {
+    console.log(this.good);
   }
 
 }

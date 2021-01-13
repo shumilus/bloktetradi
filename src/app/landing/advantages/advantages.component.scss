@@ -10,36 +10,43 @@
   }
 
   &-wrap {
+    position: relative;
     display: flex;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    border-bottom: 2px solid $brandPrimaryColor;
-    &.last {
-      padding-bottom: 0;
-      margin-bottom: 0;
-      border-bottom: none;
+    //border-bottom: 2px solid $brandPrimaryColor;
+
+    &.margin {
+      margin-bottom: -50px;
+    }
+
+    .line {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      border-bottom: 2px solid $brandPrimaryColor;
     }
   }
 
   .advantages-1 {
     background: url("../../../assets/advantages/advantages-1.png") center no-repeat;
     background-size: contain;
-    height: 55vh;
+    height: 45vh;
     width: 100%;
   }
 
   .advantages-2 {
     background: url("../../../assets/advantages/advantages-2.png") center no-repeat;
     background-size: contain;
-    height: 55vh;
+    height: 45vh;
     width: 100%;
   }
 
   .advantages-3 {
     background: url("../../../assets/advantages/advantages-3.png") center no-repeat;
     background-size: contain;
-    max-height:400px;
-    min-height:400px;
+    max-height: 400px;
+    min-height: 400px;
     max-width: 400px;
     min-width: 400px;
     border-radius: 50%;
@@ -49,26 +56,28 @@
   .advantages-4 {
     background: url("../../../assets/advantages/advantages-4.png") center no-repeat;
     background-size: contain;
-    height: 55vh;
+    height: 45vh;
     width: 100%;
   }
 
   .advantages-5 {
     background: url("../../../assets/advantages/advantages-5.png") center no-repeat;
     background-size: contain;
-    height: 55vh;
+    height: 45vh;
     width: 100%;
   }
+
   .advantages-6 {
     background: url("../../../assets/advantages/advantages-6.png") center no-repeat;
     background-size: contain;
-    height: 55vh;
+    height: 45vh;
     width: 100%;
   }
+
   .advantages-7 {
     background: url("../../../assets/advantages/advantages-7.png") center no-repeat;
     background-size: contain;
-    height: 55vh;
+    height: 45vh;
     width: 100%;
   }
 
@@ -76,7 +85,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .padding-50 {
@@ -89,6 +98,10 @@
 
   .primary-color {
     color: $brandPrimaryColor;
+  }
+
+  .hidden {
+    overflow: hidden;
   }
 }
 

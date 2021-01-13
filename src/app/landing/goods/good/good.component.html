@@ -6,7 +6,8 @@
       <div class="d-flex align-center justify-center wrap">
         <p class="price">{{good.price}}</p>
         <div class="button-wrap">
-          <button class="button">Купить</button>
+<!--          <button class="button">Купить</button>-->
+          <app-buy-button (onClick)="onBuyClick()">КУПИТЬ</app-buy-button>
         </div>
       </div>
     </div>

@@ -16,6 +16,11 @@ import { AdvantagesComponent } from './landing/advantages/advantages.component';
 import { GoodsComponent } from './landing/goods/goods.component';
 import { GoodComponent } from './landing/goods/good/good.component';
 import { HamburgerButtonComponent } from './landing/hamburger-button/hamburger-button.component';
+import { BuyButtonComponent } from './landing/goods/good/buy-button/buy-button.component';
+import { DeliveryComponent } from './landing/delivery/delivery.component';
+import { ArrowComponent } from './landing/arrow/arrow.component';
+import { PaymentComponent } from './landing/payment/payment.component';
+import { FeedbackComponent } from './landing/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,11 @@ import { HamburgerButtonComponent } from './landing/hamburger-button/hamburger-b
     GoodsComponent,
     GoodComponent,
     HamburgerButtonComponent,
+    BuyButtonComponent,
+    DeliveryComponent,
+    ArrowComponent,
+    PaymentComponent,
+    FeedbackComponent,
   ],
   imports: [
     BrowserModule,

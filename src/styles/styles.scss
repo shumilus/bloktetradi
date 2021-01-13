@@ -62,24 +62,23 @@ a {
 }
 
 button {
-  font-size: 16px;
+  font-size: var(--font-size, 2rem);
+  font-family: $caveat;
   color: $mainLightColor;
   background: $buttonColor;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 15px;
   border: none;
   outline: none;
   cursor: pointer;
   transition: .5s;
 
   &:hover {
-    color: $mainDarkColor;
     background: $buttonHoverColor;
     transition: .5s;
   }
 
   &:active {
-    color: $mainLightColor;
     background: $buttonColor;
   }
 }
@@ -115,6 +114,22 @@ button {
   }
 }
 
+.position {
+  position: relative;
+
+  &--60 {
+    top: -60px;
+  }
+
+  &--135 {
+    top: -135px;
+  }
+
+  &--195 {
+    top: -195px;
+  }
+}
+
 // flex
 .d-flex {
   display: flex;
@@ -126,6 +141,14 @@ button {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-left {
+  justify-content: flex-start;
+}
+
+.justify-right {
+  justify-content: flex-end;
 }
 
 .align-center {

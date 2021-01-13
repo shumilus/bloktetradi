@@ -1,0 +1,69 @@
+@import '../../../styles/variables.scss';
+
+.payment {
+  padding: 0 0 20px 0;
+
+  .block-content {
+    text-align: center;
+  }
+
+  .block-header {
+    padding: 80px 0 20px 0;
+    //background: $brandPrimaryColor;
+    //color: $mainLightColor;
+
+    .title {
+      margin: 0 auto;
+    }
+  }
+
+  &-text {
+    font-size: 2.7rem;
+    padding: 10px 0;
+    //color: $brandSecondaryColor;
+    color: $brandPrimaryColor;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    min-width: 200px;
+    max-width: 270px;
+    width: 100%;
+    min-height: 200px;
+    background: $mainLightColor;
+    border: solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:hover {
+      background: $goodsBorderColor;
+    }
+  }
+
+  .box1 {
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: rotate(2deg);
+  }
+
+  .box2 {
+    width: 350px;
+    border-width: 3px 3px 5px 5px;
+    border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-2deg);
+  }
+
+  .box3 {
+    border-width: 5px 3px 3px 5px;
+    border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+    transform: rotate(2deg);
+  }
+
+  .oddboxinner {
+    margin: 15px;
+    transform: rotate(-2deg);
+  }
+}
