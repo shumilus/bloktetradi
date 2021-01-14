@@ -10,7 +10,9 @@
     <img class="phone-icon" src="./assets/icons/phone-call.svg" alt="phone">
   </div>
 
-<!--  <div>-->
-<!--    <app-hamburger-button></app-hamburger-button>-->
-<!--  </div>-->
+  <app-hamburger-button (click)="isMobileMenuOpen = !isMobileMenuOpen"></app-hamburger-button>
+
+  <div class="mobile-menu" [ngClass]="{'mobile-menu-open': isMobileMenuOpen}">
+    <app-menu (onScrollTo)="scrollTo($event)"></app-menu>
+  </div>
 </header>

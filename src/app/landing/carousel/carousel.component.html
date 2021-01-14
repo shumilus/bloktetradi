@@ -1,4 +1,4 @@
-<div class="carousel">
+<div class="carousel" [ngClass]="{'mobileView': mobileView}">
   <owl-carousel-o [options]="customOptions">
     <ng-template carouselSlide [dotContent]="'sd'">
       <div class="poster" style="background-image: url('../../../assets/carousel/banner-1.jpg')"></div>

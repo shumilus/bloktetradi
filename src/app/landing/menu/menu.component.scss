@@ -1,12 +1,7 @@
 @import '../../../styles/variables.scss';
 
-:host {
-  height: inherit;
-}
-
 menu {
   display: flex;
-  height: inherit;
 
   li {
     font-family: $caveat;
@@ -26,6 +21,17 @@ menu {
       //background: rgba(255, 255, 255, 0.2);
       border-bottom: 3px solid black;
       transition: 0.5s;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
   }
 }

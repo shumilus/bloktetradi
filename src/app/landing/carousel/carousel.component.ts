@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {OwlOptions} from 'ngx-owl-carousel-o';
 
 @Component({
@@ -7,6 +7,8 @@ import {OwlOptions} from 'ngx-owl-carousel-o';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
+  public mobileView: boolean;
+
   customOptions: any = {
     loop: true,
     margin: 10,
@@ -31,9 +33,15 @@ export class CarouselComponent implements OnInit {
     // nav: true
   };
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.mobileView = window.innerHeight > window.innerWidth;
   }
 
 }

@@ -6,12 +6,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
-  //background: rgba(255, 255, 255, 0.2);
+  height: 80px;
   backdrop-filter: blur(10px);
   padding: 0 100px;
 
-  background: linear-gradient(rgba(25,27,32,.1),rgba(25,27,32,0));
+  background: linear-gradient(rgba(25, 27, 32, .1), rgba(25, 27, 32, 0));
+  //background: linear-gradient(rgb(138, 0, 138), rgba(138, 0, 138, 0));
   //box-shadow: 0 10px 10px rgba(0,0,0,.25);
 
   .logo {
@@ -38,12 +38,13 @@ header {
     }
   }
 
-
-
-  .menu-wrap{
+  .menu-wrap {
     display: flex;
     align-items: center;
     height: inherit;
+  }
+
+  app-menu {
   }
 
   .phone-icon {
@@ -61,4 +62,65 @@ header {
     }
   }
 
+  app-hamburger-button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: none;
+    padding: 2px;
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    backdrop-filter: blur(20px);
+    background: linear-gradient(rgba(25, 27, 32, .1), rgba(25, 27, 32, 0));
+    //background: linear-gradient(rgb(138, 0, 138, .1), rgba(138, 0, 138, 0));
+    opacity: 0;
+    transition: 1s;
+
+    &.mobile-menu-open {
+      height: 100vh;
+      width: 100vw;
+      opacity: 1;
+      transition: 1s;
+    }
+  }
+
+  @media (max-width: 768px) {
+    backdrop-filter: none;
+    background: transparent;
+    //background: linear-gradient(rgba(25, 27, 32, .1), rgba(25, 27, 32, 0));
+    //background: linear-gradient(rgb(138, 0, 138), rgba(138, 0, 138, 0));
+    //background: $brandPrimaryColor;
+    padding: 0;
+
+    .logo {
+      display: none;
+    }
+
+    .menu-wrap {
+      display: none;
+    }
+
+    app-hamburger-button {
+      display: block;
+    }
+
+    .mobile-menu {
+      app-menu {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+      }
+    }
+
+  }
 }

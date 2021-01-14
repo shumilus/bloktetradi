@@ -1,4 +1,5 @@
-$color: #fff;		  // icon color
+@import '../../../styles/variables.scss';
+
 $blue: #158fef;	  // background color
 $animation: 0.6s;	// animation speed
 $scale: 1;			  // icon scale 68/68 default
@@ -7,29 +8,13 @@ $scale: 1;			  // icon scale 68/68 default
   box-sizing: border-box;
 }
 
-// spacing + background-color
-body {
-  background: $blue;
-  padding: 40px;
-}
-
-h4 {
-  font-family: arial,helvetica,serif;
-  color: $color;
-  font-size: 18px;
-  text-align: center;
-  margin: 40px 0 0;
-
-}
-
 .hamburglar {
   transform: scale($scale);
-  margin: 40px auto;
   position: relative;
   display: block;
   width: 68px;
   height: 68px;
-  background: $blue;
+  //background: $blue;
   -webkit-touch-callout: none;
   user-select: none;
 }
@@ -67,7 +52,7 @@ h4 {
     width: 30px;
     height: 34px;
     margin: 0 4px 0 0;
-    background: $color;
+    background: $brandPrimaryColor;
   }
 }
 
@@ -176,7 +161,7 @@ h4 {
   height: 4px;
   width: 36px;
   border-radius: 2px;
-  background: $color;
+  background: $brandPrimaryColor;
 }
 
 .burger-bun-top {
