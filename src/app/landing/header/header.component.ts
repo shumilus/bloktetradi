@@ -16,12 +16,16 @@ export class HeaderComponent implements OnInit {
   }
 
   public scrollTo(link: string): void {
+    this.isMobileMenuOpen = false;
+    this.isMobileMenuOpen = false;
     this.onScrollTo.emit(link);
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    this.isMobileMenuOpen = window.innerHeight > 768;
+    if (window.innerWidth > 768) {
+      this.isMobileMenuOpen = false;
+    }
   }
 
 }

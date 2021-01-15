@@ -14,30 +14,6 @@ header {
   //background: linear-gradient(rgb(138, 0, 138), rgba(138, 0, 138, 0));
   //box-shadow: 0 10px 10px rgba(0,0,0,.25);
 
-  .logo {
-    cursor: pointer;
-
-    &-icon {
-      width: 80px;
-    }
-
-    &-name {
-      font-size: 40px;
-      font-family: $caveat;
-      text-transform: capitalize;
-      font-weight: 600;
-      color: $brandSecondaryColor;
-      transition: .5s;
-    }
-
-    &:hover {
-      .logo-name {
-        color: $buttonHoverColor;
-        transition: .5s;
-      }
-    }
-  }
-
   .menu-wrap {
     display: flex;
     align-items: center;
@@ -65,7 +41,7 @@ header {
   app-hamburger-button {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 10px;
     transform: translateY(-50%);
     z-index: 2;
     display: none;
@@ -91,6 +67,20 @@ header {
       width: 100vw;
       opacity: 1;
       transition: 1s;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 880px) {
+    .logo-name {
+      display: none;
     }
   }
 

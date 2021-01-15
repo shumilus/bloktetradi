@@ -4,7 +4,6 @@ menu {
   display: flex;
 
   li {
-    font-family: $caveat;
     //color: $brandPrimaryColor;
     display: flex;
     align-items: center;
@@ -13,14 +12,28 @@ menu {
     padding: 10px 20px;
     transition: text-shadow .3s;
     cursor: pointer;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
 
     &:hover {
-      text-shadow: 0 0 .85px #333, 0 0 .85px #333;
+      text-shadow: 0 0 .1px #333, 0 0 .1px $mainDarkColor;
       //background: rgba(255, 255, 255, 0.2);
-      border-bottom: 3px solid black;
+      border-bottom: 2px solid black;
       transition: 0.5s;
+    }
+  }
+
+  @media (max-width: 1280px) and (min-width: 769px) {
+    li {
+      font-size: 1.8rem;
+      padding: 10px 13px;
+    }
+  }
+
+  @media (max-width: 970px) and (min-width: 769px) {
+    li {
+      font-size: 1.6rem;
+      padding: 10px 10px;
     }
   }
 

@@ -5,33 +5,32 @@
   </div>
 
   <div class="block-content d-flex align-center">
-    <!--      <p class="text">— стильное дизайнерское оформление обложки</p>-->
-    <p class="with-50 p-r-100 text">Сменные блоки крепятся на кольцевой механизм</p>
-    <div class="with-50 d-flex justify-between">
-      <img class="with-30" src="../../../assets/features/feature-1.png" alt="feature-1">
-      <img class="with-30" src="../../../assets/features/feature-2.png" alt="feature-2">
-      <img class="with-30" src="../../../assets/features/feature-3.png" alt="feature-3">
+    <div class="sub-block text">Сменные блоки крепятся на кольцевой механизм</div>
+    <div class="sub-block d-flex justify-between wrap img">
+      <img class="with-30 feature-1-img" src="../../../assets/features/feature-1.png" alt="feature-1">
+      <img class="with-30 feature-1-img" src="../../../assets/features/feature-2.png" alt="feature-2">
+      <img class="with-30 feature-1-img" src="../../../assets/features/feature-3.png" alt="feature-3">
     </div>
   </div>
 
-  <div class="block-content d-flex align-center position position--60">
-    <div class="with-50 d-flex align-center justify-center feature-wrap">
-      <img [ngClass]="{'feature': !featureToggle}" class="with-50" src="../../../assets/features/feature-4.png" alt="feature-4">
-      <img [ngClass]="{'feature': featureToggle}" class="with-50" src="../../../assets/features/feature-5.png" alt="feature-5">
+  <div class="block-content d-flex align-center">
+    <div class="sub-block d-flex align-center justify-center feature-wrap">
+      <img [ngClass]="{'feature': !featureToggle}" class="img-with" src="../../../assets/features/feature-4.png" alt="feature-4">
+      <img [ngClass]="{'feature': featureToggle}" class="img-with" src="../../../assets/features/feature-5.png" alt="feature-5">
     </div>
-    <p class="with-50 p-l-100 text">Можно добавлять, убирать или перекладывать листы</p>
+    <div class="sub-block text">Можно добавлять, убирать или перекладывать листы</div>
   </div>
 
-  <div class="block-content d-flex justify-between align-center position position--135">
-    <p class="with-50 text">Надежный переплёт защищает бумагу и ваши записи</p>
-    <div class="with-50 p-l-100 d-flex justify-center justify-between align-center">
-      <img class="with-45" src="../../../assets/features/feature-6.png" alt="feature-6">
-      <img class="with-45" src="../../../assets/features/feature-7.png" alt="feature-7">
+  <div class="block-content d-flex justify-center align-center">
+    <div class="sub-block text">Надежный переплёт защищает бумагу и ваши записи</div>
+    <div class="sub-block d-flex justify-center align-center wrap">
+      <img class="feature-3-img" src="../../../assets/features/feature-6.png" alt="feature-6">
+      <img class="feature-3-img" src="../../../assets/features/feature-7.png" alt="feature-7">
     </div>
   </div>
 
-  <div class="block-content d-flex align-center position position--195">
-    <div class="with-50">
+  <div class="block-content d-flex align-center">
+    <div class="sub-block">
       <div class="carousel">
         <owl-carousel-o [options]="customOptions">
           <ng-template carouselSlide [dotContent]="'sd'">
@@ -43,12 +42,10 @@
         </owl-carousel-o>
       </div>
     </div>
-
-<!--    <img class="with-50" src="../../../assets/features/feature-8.png" alt="feature-8">-->
-    <p class="with-50 p-l-100 text">Различные материалы обложек</p>
+    <p class="sub-block text">Различные материалы обложек</p>
   </div>
 
-  <div class="block-content position position--195">
+  <div class="block-content">
     <div class="feature-bg heading-frame">
       <h2 contenteditable="true" class="text">Удобный <br> формат тетради А5</h2>
     </div>

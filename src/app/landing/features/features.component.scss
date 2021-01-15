@@ -3,14 +3,20 @@
 .features {
   background: $lightBackgroundColor;
   padding: 0 0 20px 0;
-  position: relative;
-  top: -32px;
-  margin-bottom: -200px;
   overflow: hidden;
 
   &-header {
     padding: 80px 0 30px 0;
     background: linear-gradient(to bottom, $brandSecondaryColor, $lightBackgroundColor);
+  }
+
+  .block-content {
+    //border-bottom: 2px solid $brandPrimaryColor;
+    .sub-block {
+      padding: 0 20px;
+      width: 50%;
+      overflow: hidden;
+    }
   }
 
   .text {
@@ -26,17 +32,47 @@
     position: absolute;
   }
 
+  .feature-1-img {
+    max-width: 270px;
+  }
+
+  .feature-3-img {
+    box-sizing: border-box;
+    width: 45%;
+    padding: 10px 15px;
+  }
+
+  .img-with {
+    max-width: 420px;
+    width: 50%;
+  }
+
+  .carousel {
+    margin: 0 auto;
+    max-width: 700px;
+
+    .poster {
+      height: 290px;
+      background-color: $mainLightColor;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      box-sizing: border-box;
+    }
+
+  }
+
   .feature-bg {
     height: 70vh;
     background: #333 url("../../../assets/features/2.png") center no-repeat;
     background-size: cover;
-
     display: grid;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
     grid-template-columns: max-content auto;
     grid-template-rows: auto max-content;
     color: $mainDarkColor;
     padding: 2rem;
+
     &:before,
     &:after {
       content: "";
@@ -45,15 +81,18 @@
       height: 100%;
       border: 2px solid $brandPrimaryColor;
     }
+
     &:before {
       grid-row: 1 / 2;
       border-right: none;
       border-bottom: none;
     }
+
     &:after {
       grid-row: 1 / span 2;
       border-left: none;
     }
+
     h2 {
       margin: 1rem 1rem -.5rem 0;
       max-width: 100%;
@@ -61,27 +100,138 @@
     }
   }
 
-  .carousel {
-    margin: 0 auto;
-    max-width: 700px;
-
-    .poster {
-      height: 320px;
-      background-color: $mainLightColor;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      box-sizing: border-box;
-    }
-    .owl-carousel .owl-stage-outer {
-      /* override */
-      overflow: initial;
-    }
-
-    #bodyContent {
-      /* override */
-      overflow: hidden;
+  @media (max-width: 1280px) {
+    .carousel {
+      .poster {
+        height: 250px;
+      }
     }
   }
 
+  @media (max-width: 1024px) {
+
+    .block-content {
+
+      .text {
+        padding-bottom: 10px;
+        font-size: 2rem;
+      }
+    }
+
+    .carousel {
+
+      .poster {
+        height: 230px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-header {
+      padding: 20px;
+      background: linear-gradient(to bottom, $brandSecondaryColor, $lightBackgroundColor);
+    }
+
+    .block-content {
+      position: static;
+      flex-wrap: wrap;
+      border-bottom: 2px solid $brandPrimaryColor;
+
+      .sub-block {
+        width: 100%;
+      }
+
+      .text {
+        text-align: center;
+        //padding: 0;
+        font-size: 1.8rem;
+      }
+
+      .img {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img {
+          width: 90%;
+          padding: 10px;
+          box-sizing: border-box;
+        }
+      }
+
+      .feature-wrap {
+        padding-top: 10px;
+        padding-bottom: 15px;
+      }
+
+      .img-with {
+        width: 100%;
+      }
+
+    }
+
+    .carousel {
+
+      .poster {
+        height: 220px;
+      }
+    }
+
+    .feature-bg {
+      height: 40vh;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .feature-bg {
+      height: 33vh;
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 445px) {
+    .block-header {
+      .subtitle {
+        padding: 0 50px;
+      }
+    }
+
+    .feature-3-img {
+      max-width: 270px;
+      width: 100%;
+    }
+
+    .img-with {
+      max-width: 250px;
+    }
+
+    .carousel {
+
+      .poster {
+        height: 200px;
+      }
+    }
+
+    .feature-bg {
+      height: 25vh;
+    }
+  }
+
+  @media (max-width: 445px) {
+    .carousel {
+
+      .poster {
+        height: 150px;
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    .feature-bg {
+      height: 15vh;
+
+      .text {
+        font-size: 1.3rem;
+      }
+    }
+  }
 }

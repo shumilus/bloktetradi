@@ -1,6 +1,6 @@
 <div class="hamburglar"
-     [ngClass]="{'is-closed': isClosed, 'is-open': !isClosed}"
-     (click)="isClosed = !isClosed">
+     [ngClass]="{'is-closed': !isOpen, 'is-open': isOpen}"
+     (click)="isOpen = !isOpen">
 
   <div class="burger-icon">
     <div class="burger-container">

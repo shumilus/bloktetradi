@@ -82,6 +82,29 @@ button {
     background: $buttonColor;
   }
 }
+// LOGO
+.logo {
+  //cursor: pointer;
+
+  &-icon {
+    width: 80px;
+  }
+
+  &-name {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: $brandSecondaryColor;
+    transition: .5s;
+  }
+
+  &:hover {
+    //.logo-name {
+    //  color: $buttonHoverColor;
+    //  transition: .5s;
+    //}
+  }
+}
 
 // BLOCK
 .block-header {
@@ -107,7 +130,8 @@ button {
 }
 
 .block-content {
-  padding: 22px 130px;
+  padding: 22px 0;
+  margin: 0 110px;
 
   .text {
     font-size: 18px;
@@ -240,7 +264,38 @@ button {
   margin: 0;
   background: transparent;
 }
+
 path {
   //stroke: $brandSecondaryColor !important;
   stroke: $brandPrimaryColor !important;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    &-icon {
+      width: 70px;
+    }
+    &-name {
+      font-size: 2.2rem;}
+  }
+
+  .block-content {
+    margin: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .block-header {
+    padding: 0 15px;
+
+    .title {
+      font-size: 2rem;
+      letter-spacing: 0;
+    }
+  }
+
+  .block-content {
+    padding: 10px 0;
+    margin: 0 20px;
+  }
 }

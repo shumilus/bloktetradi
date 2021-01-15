@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-hamburger-button',
@@ -6,11 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hamburger-button.component.scss']
 })
 export class HamburgerButtonComponent implements OnInit {
-  public isClosed = true;
+  @Input() isOpen: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if (window.innerWidth > 768) {
+      this.isOpen = false;
+    }
   }
 
 }
