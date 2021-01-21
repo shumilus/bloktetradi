@@ -19,24 +19,24 @@ export class AdvantagesComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // let test = 1;
     // let directionUp = true;
-    this.interval = setInterval(() => {
-      // if (test === 30) {
-      //   test = 0;
-      //   directionUp = !directionUp;
-      // }
-      //
-      // if (test === 0) {
-      //   directionUp = !directionUp;
-      // }
-      // if (directionUp) {
-      //   ++test;
-      //   this.degrees = `rotate(${++this.value}deg)`;
-      // } else {
-      //   --test;
-      //   this.degrees = `rotate(${--this.value}deg)`;
-      // }
-      this.degrees = `rotate(${++this.value}deg)`;
-    }, 300);
+    // this.interval = setInterval(() => {
+    //   // if (test === 30) {
+    //   //   test = 0;
+    //   //   directionUp = !directionUp;
+    //   // }
+    //   //
+    //   // if (test === 0) {
+    //   //   directionUp = !directionUp;
+    //   // }
+    //   // if (directionUp) {
+    //   //   ++test;
+    //   //   this.degrees = `rotate(${++this.value}deg)`;
+    //   // } else {
+    //   //   --test;
+    //   //   this.degrees = `rotate(${--this.value}deg)`;
+    //   // }
+    //   this.degrees = `rotate(${++this.value}deg)`;
+    // }, 300);
   }
 
   ngOnDestroy() {

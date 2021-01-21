@@ -138,22 +138,6 @@ button {
   }
 }
 
-.position {
-  position: relative;
-
-  &--60 {
-    top: -60px;
-  }
-
-  &--135 {
-    top: -135px;
-  }
-
-  &--195 {
-    top: -195px;
-  }
-}
-
 // flex
 .d-flex {
   display: flex;
@@ -195,40 +179,8 @@ button {
   flex: 1;
 }
 
-.flex-2 {
-  flex: 2;
-}
-
-.with-20 {
-  width: 20%;
-}
-
 .with-30 {
   width: 30%;
-}
-
-.with-40 {
-  width: 40%;
-}
-
-.with-45 {
-  width: 45%;
-}
-
-.with-50 {
-  width: 50%;
-}
-
-.with-70 {
-  width: 70%;
-}
-
-.p-r-100 {
-  padding-right: 100px;
-}
-
-.p-l-100 {
-  padding-left: 100px;
 }
 
 .text-center {

@@ -67,4 +67,31 @@
     text-align: center;
     padding: 10px;
   }
+
+  @media (max-width: 420px) {
+    .price {
+      padding: 0 10px 1px 10px;
+    }
+  }
+
+
+}
+
+@media (max-width: 786px) {
+  :host {
+    width: 50%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  :host {
+    width: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  :host {
+    width: 100%;
+  }
 }

@@ -2,24 +2,26 @@
 
 .advantages {
   background: $lightBackgroundColor;
-  padding: 0 0 20px 0;
   overflow: hidden;
 
   &-header {
-    padding: 80px 0 10px 0;
+    padding: 75px 0 10px 0;
     background: linear-gradient(to bottom, $brandSecondaryColor, $lightBackgroundColor);
+  }
+
+  .sub-block {
+    width: 50%;
+    padding: 0 20px 10px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   &-wrap {
     position: relative;
     display: flex;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     margin-bottom: 30px;
     //border-bottom: 2px solid $brandPrimaryColor;
-
-    &.margin {
-      margin-bottom: -50px;
-    }
 
     .line {
       position: absolute;
@@ -30,56 +32,49 @@
   }
 
   .advantages-1 {
-    background: url("../../../assets/advantages/advantages-1.png") center no-repeat;
-    background-size: contain;
-    height: 45vh;
-    width: 90%;
+    max-width: 430px;
+    min-width: 245px;
+    width: 100%;
   }
 
   .advantages-2 {
-    background: url("../../../assets/advantages/advantages-2.png") center no-repeat;
-    background-size: contain;
-    height: 45vh;
-    width: 90%;
+    max-width: 430px;
+    min-width: 245px;
+    width: 100%;
   }
 
   .advantages-3 {
     background: url("../../../assets/advantages/advantages-3.png") center no-repeat;
     background-size: contain;
-    max-height: 400px;
-    min-height: 400px;
-    max-width: 400px;
-    min-width: 400px;
+    height: 400px;
+    width: 400px;
     border-radius: 50%;
     transition: all .1s;
+    margin: 10px 20px;
   }
 
   .advantages-4 {
-    background: url("../../../assets/advantages/advantages-4.png") center no-repeat;
-    background-size: contain;
-    height: 45vh;
-    width: 90%;
+    width: 100%;
+    max-width: 310px;
+    min-width: 245px;
   }
 
   .advantages-5 {
-    background: url("../../../assets/advantages/advantages-5.png") center no-repeat;
-    background-size: contain;
-    height: 45vh;
-    width: 90%;
+    width: 100%;
+    max-width: 430px;
+    min-width: 245px;
   }
 
   .advantages-6 {
-    background: url("../../../assets/advantages/advantages-6.png") center no-repeat;
-    background-size: contain;
-    height: 45vh;
-    width: 90%;
+    width: 100%;
+    max-width: 600px;
+    min-width: 245px;
   }
 
   .advantages-7 {
-    background: url("../../../assets/advantages/advantages-7.png") center no-repeat;
-    background-size: contain;
-    height: 45vh;
-    width: 90%;
+    width: 100%;
+    max-width: 550px;
+    min-width: 300px;
   }
 
   &-text {
@@ -89,20 +84,80 @@
     font-size: 2.5rem;
   }
 
-  .padding-50 {
-    padding: 0 50px;
-  }
-
-  .padding-20 {
-    padding: 0 20px;
-  }
-
   .primary-color {
     color: $brandPrimaryColor;
   }
 
   .hidden {
     overflow: hidden;
+  }
+
+  @media (max-width: 1024px) {
+    &-text {
+      font-size: 2rem;
+    }
+
+    .advantages-3 {
+      height: 250px;
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    &-header {
+      padding: 20px;
+    }
+
+    &-text {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 568px) {
+    &-text {
+      font-size: 1.8rem;
+    }
+
+
+    &-wrap {
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .advantages-3 {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    &-wrap {
+      display: block;
+    }
+
+    .sub-block {
+      width: 100%;
+      padding: 0 0 10px 0;
+    }
+
+    .advantages-1 {
+      max-width: 340px;
+    }
+
+    .advantages-2 {
+      max-width: 340px;
+    }
+
+    .advantages-4 {
+      max-width: 280px;
+    }
+
+    .advantages-5 {
+      max-width: 300px;
+    }
   }
 }
 
