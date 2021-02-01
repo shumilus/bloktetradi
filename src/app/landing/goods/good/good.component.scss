@@ -68,13 +68,18 @@
     padding: 10px;
   }
 
+
+  @media (width: 812px) {
+    .good-title {
+      font-size: 2rem;
+    }
+  }
+
   @media (max-width: 420px) {
     .price {
       padding: 0 10px 1px 10px;
     }
   }
-
-
 }
 
 @media (max-width: 786px) {
