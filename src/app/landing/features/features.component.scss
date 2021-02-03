@@ -15,7 +15,6 @@
     .sub-block {
       padding: 0 20px;
       width: 50%;
-      overflow: hidden;
     }
   }
 
@@ -45,6 +44,10 @@
   .img-with {
     max-width: 420px;
     width: 50%;
+  }
+
+  .overflow {
+    overflow: hidden;
   }
 
   .carousel {
